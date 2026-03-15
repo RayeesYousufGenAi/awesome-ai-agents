@@ -14,9 +14,9 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/agents-5+-blueviolet?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
+  <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
 </p>
 
 <p align="center">
@@ -31,6 +31,7 @@
   <a href="#-quick-start">🚀 Quick Start</a> •
   <a href="#-how-to-contribute-your-own-agent">🤝 Contribute</a> •
   <a href="#-propose-a-new-agent">💡 Propose</a> •
+  <a href="#-sponsors--support">💖 Sponsor</a> •
   <a href="#-community">💬 Community</a>
 </p>
 
@@ -283,6 +284,29 @@ Common reasons: code doesn't run, missing README, hardcoded API keys, or duplica
 Yes! This project is MIT licensed. You can use, modify, and distribute commercially. Just include the license.
 
 </details>
+
+---
+
+## 💖 Sponsors & Support
+
+Building and maintaining high-quality open-source AI agents takes significant time and effort. If you find this repository useful for your learning, projects, or business, please consider supporting the development!
+
+Your sponsorship helps me:
+- Add more advanced AI agents (Voice, Vision, multi-agent frameworks)
+- Maintain and update existing code (API changes, library updates)
+- Create more comprehensive tutorials and documentation
+
+<p align="center">
+  <a href="https://github.com/sponsors/RayeesYousufGenAi">
+    <img src="https://img.shields.io/badge/Sponsor_Me_On_GitHub-💖-ff69b4?style=for-the-badge&logo=github" />
+  </a>
+  <a href="https://www.buymeacoffee.com/rayeesyousuf">
+    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-☕-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
+  </a>
+  <a href="https://paypal.me/rayeesyousuf">
+    <img src="https://img.shields.io/badge/Donate_via_PayPal-💳-00457C?style=for-the-badge&logo=paypal" />
+  </a>
+</p>
 
 ---
 
