@@ -71,27 +71,55 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 
 ## 🚀 Quick Start
 
-### 1. Clone the repo
+### Option 1: Using Docker (Recommended)
+
+Run all agents at once with Docker Compose:
+
+```bash
+export OPENAI_API_KEY="your-key-here"
+docker-compose up
+```
+
+Or run in detached mode (background):
+
+```bash
+export OPENAI_API_KEY="your-key-here"
+docker-compose up -d
+```
+
+**Service Ports:**
+
+| Service | Port | URL |
+|---------|------|-----|
+| Chatbot | 8501 | http://localhost:8501 |
+| RAG Assistant | 8502 | http://localhost:8502 |
+| Code Reviewer | 8503 | http://localhost:8503 |
+| Data Analyst | 8504 | http://localhost:8504 |
+| Web Researcher | 8505 | http://localhost:8505 |
+
+### Option 2: Manual Setup
+
+#### 1. Clone the repo
 
 ```bash
 git clone https://github.com/RayeesYousufGenAi/awesome-ai-agents.git
 cd awesome-ai-agents
 ```
 
-### 2. Pick an agent and install its dependencies
+#### 2. Pick an agent and install its dependencies
 
 ```bash
 cd agents/chatbot          # or any agent folder
 pip install -r requirements.txt
 ```
 
-### 3. Set your API key
+#### 3. Set your API key
 
 ```bash
 export OPENAI_API_KEY="your-key-here"
 ```
 
-### 4. Run it!
+#### 4. Run it!
 
 ```bash
 streamlit run app.py

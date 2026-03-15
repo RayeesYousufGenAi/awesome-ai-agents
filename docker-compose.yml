@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  chatbot:
+    build:
+      context: ./agents/chatbot
+      dockerfile: Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  rag-assistant:
+    build:
+      context: ./agents/rag-assistant
+      dockerfile: Dockerfile
+    ports:
+      - "8502:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  code-reviewer:
+    build:
+      context: ./agents/code-reviewer
+      dockerfile: Dockerfile
+    ports:
+      - "8503:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  data-analyst:
+    build:
+      context: ./agents/data-analyst
+      dockerfile: Dockerfile
+    ports:
+      - "8504:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  web-researcher:
+    build:
+      context: ./agents/web-researcher
+      dockerfile: Dockerfile
+    ports:
+      - "8505:8501"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
