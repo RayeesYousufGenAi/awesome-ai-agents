@@ -16,6 +16,14 @@ from youtube_transcript_api._errors import TranscriptsDisabled, NoTranscriptFoun
 
 load_dotenv()
 
+# Validate OpenAI API key early for clearer error messages
+openai_api_key = os.environ.get("OPENAI_API_KEY")
+if not openai_api_key:
+    raise ValueError(
+        "OPENAI_API_KEY environment variable is not set. "
+        "Please set it in your .env file or environment variables."
+    )
+
 st.set_page_config(
     page_title="📺 YouTube Video Summarizer",
     page_icon="📺",
@@ -24,7 +32,7 @@ st.set_page_config(
 st.title("📺 YouTube Video Summarizer")
 st.caption("Paste a YouTube URL and get an AI-generated summary with key points from the transcript")
 
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+client = OpenAI(api_key=openai_api_key)
 
 MAX_CHUNK_SIZE = 4000  # Characters per chunk to stay within token limits
 MAX_TOTAL_CHARS = 50000  # Maximum characters to process for very long videos
@@ -71,7 +79,7 @@ def get_transcript(video_id: str) -> str:
         Exception: For other API errors.
     """
     try:
-        transcript_list = YouTubeTranscriptApi.get_transcript(video_id)
+        transcript_list = YouTubeTranscriptApi.get_transcript(video_id, proxies={"timeout": 30})
         transcript_text = " ".join([segment["text"] for segment in transcript_list])
         return transcript_text
     except TranscriptsDisabled:
@@ -150,6 +158,7 @@ def summarize_chunk(chunk: str, chunk_index: int, total_chunks: int) -> str:
         ],
         temperature=0.3,
         max_tokens=500,
+        timeout=60,
     )
     return response.choices[0].message.content
 
@@ -193,6 +202,7 @@ def combine_summaries(summaries: list[str], video_url: str) -> str:
         ],
         temperature=0.3,
         max_tokens=800,
+        timeout=60,
     )
 
     final_summary = response.choices[0].message.content
@@ -244,7 +254,7 @@ with col1:
     )
 
 with col2:
-    st.markdown("<br>", unsafe_allow_html=True)
+    st.markdown("&nbsp;  ")
     summarize_button = st.button("📝 Summarize", type="primary", use_container_width=True)
 
 # Error message placeholder
