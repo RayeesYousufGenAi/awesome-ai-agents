@@ -1,0 +1,249 @@
+"""
+AI SQL Query Generator — Convert natural language to SQL queries and execute them.
+Upload database schema via SQL dump file or text input, ask questions in plain English,
+and get SQL queries generated and executed with results displayed.
+Author: Rayees Yousuf (@RayeesYousufGenAi)
+"""
+
+import os
+import re
+import streamlit as st
+from openai import OpenAI
+from dotenv import load_dotenv
+from sqlalchemy import create_engine, text, inspect
+from sqlalchemy.exc import SQLAlchemyError
+
+load_dotenv()
+
+st.set_page_config(page_title="🗄️ AI SQL Query Generator", page_icon="🗄️", layout="wide")
+st.title("🗄️ AI SQL Query Generator")
+st.caption("Upload your database schema and ask questions in plain English to generate SQL queries")
+
+client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
+# Initialize SQLite in-memory database
+@st.cache_resource
+def get_database_engine():
+    """Create and return an in-memory SQLite engine."""
+    return create_engine("sqlite:///:memory:", echo=False)
+
+
+def extract_schema_from_sql(sql_content: str) -> str:
+    """Extract CREATE TABLE statements from SQL dump."""
+    # Remove comments
+    sql_content = re.sub(r'--.*?\n', '\n', sql_content)
+    sql_content = re.sub(r'/\*.*?\*/', '', sql_content, flags=re.DOTALL)
+
+    # Find CREATE TABLE statements
+    create_pattern = r'CREATE\s+TABLE\s+[^;]+;'
+    matches = re.findall(create_pattern, sql_content, re.IGNORECASE | re.DOTALL)
+
+    if matches:
+        return '\n\n'.join(matches)
+    return sql_content.strip()
+
+
+def execute_schema_sql(engine, sql_content: str) -> tuple[bool, str]:
+    """Execute SQL schema statements to set up the database."""
+    try:
+        # Split SQL into individual statements
+        statements = [s.strip() for s in re.split(r';\s*', sql_content) if s.strip()]
+
+        with engine.connect() as conn:
+            for statement in statements:
+                # Skip non-DDL/DML statements
+                if any(keyword in statement.upper() for keyword in ['CREATE', 'INSERT', 'ALTER', 'DROP']):
+                    conn.execute(text(statement))
+            conn.commit()
+        return True, "Schema loaded successfully"
+    except SQLAlchemyError as e:
+        return False, f"SQL Error: {str(e)}"
+    except Exception as e:
+        return False, f"Error: {str(e)}"
+
+
+def get_schema_info(engine) -> dict:
+    """Extract schema information from the database."""
+    try:
+        inspector = inspect(engine)
+        tables = inspector.get_table_names()
+        schema_info = {}
+
+        for table in tables:
+            columns = inspector.get_columns(table)
+            schema_info[table] = [
+                {
+                    "name": col["name"],
+                    "type": str(col["type"]),
+                }
+                for col in columns
+            ]
+
+        return schema_info
+    except Exception:
+        return {}
+
+
+def schema_to_text(schema_info: dict) -> str:
+    """Convert schema info to a text representation for the LLM."""
+    lines = []
+    lines.append("Database Schema:")
+    lines.append("-" * 40)
+
+    for table_name, columns in schema_info.items():
+        lines.append(f"\nTable: {table_name}")
+        lines.append("Columns:")
+        for col in columns:
+            lines.append(f"  - {col['name']} ({col['type']})")
+
+    return "\n".join(lines)
+
+
+def generate_sql_query(client: OpenAI, schema: str, question: str) -> tuple[str, str]:
+    """Use OpenAI GPT-4 to generate SQL from natural language."""
+    try:
+        prompt = f"""Given the following database schema:
+
+{schema}
+
+Convert this natural language question to a valid SQL query:
+"{question}"
+
+Provide ONLY the SQL query without any explanation, markdown formatting, or code blocks.
+The query should be compatible with SQLite syntax."""
+
+        response = client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {
+                    "role": "system",
+                    "content": (
+                        "You are an expert SQL query generator. "
+                        "Convert natural language questions to accurate SQL queries. "
+                        "Return only the SQL query, no explanations or markdown."
+                    ),
+                },
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.1,
+        )
+
+        sql = response.choices[0].message.content.strip()
+        # Remove markdown code blocks if present
+        sql = re.sub(r'```sql\s*', '', sql)
+        sql = re.sub(r'```\s*$', '', sql)
+        sql = sql.strip()
+
+        return sql, ""
+    except Exception as e:
+        return "", f"Error generating SQL: {str(e)}"
+
+
+def execute_query(engine, query: str) -> tuple[list, list, str]:
+    """Execute SQL query and return results."""
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text(query))
+            columns = list(result.keys())
+            rows = result.fetchall()
+            return rows, columns, ""
+    except SQLAlchemyError as e:
+        return [], [], f"SQL Execution Error: {str(e)}"
+    except Exception as e:
+        return [], [], f"Error: {str(e)}"
+
+
+# Sidebar for schema input
+tab1, tab2 = st.tabs(["📁 Upload SQL Dump", "📝 Paste Schema"])
+
+with tab1:
+    st.subheader("Upload SQL Dump File")
+    uploaded_file = st.file_uploader("Upload your SQL schema file (.sql)", type=["sql"])
+
+with tab2:
+    st.subheader("Paste Schema Directly")
+    schema_text = st.text_area(
+        "Paste your CREATE TABLE statements here:",
+        height=200,
+        placeholder="CREATE TABLE users (\n  id INTEGER PRIMARY KEY,\n  name TEXT\n);",
+    )
+
+# Main content area
+st.markdown("---")
+
+# Get database engine
+engine = get_database_engine()
+
+# Process schema input
+schema_loaded = False
+schema_info = {}
+
+if uploaded_file is not None:
+    sql_content = uploaded_file.getvalue().decode("utf-8")
+    success, message = execute_schema_sql(engine, sql_content)
+
+    if success:
+        schema_info = get_schema_info(engine)
+        schema_loaded = True
+        st.success(f"✅ {message}")
+    else:
+        st.error(f"❌ {message}")
+
+elif schema_text.strip():
+    success, message = execute_schema_sql(engine, schema_text)
+
+    if success:
+        schema_info = get_schema_info(engine)
+        schema_loaded = True
+        st.success(f"✅ {message}")
+    else:
+        st.error(f"❌ {message}")
+
+# Display schema preview
+if schema_loaded and schema_info:
+    st.subheader("📋 Database Schema")
+    for table_name, columns in schema_info.items():
+        with st.expander(f"Table: {table_name}"):
+            col_data = [{"Column": col["name"], "Type": col["type"]} for col in columns]
+            st.dataframe(col_data, use_container_width=True, hide_index=True)
+
+    # Natural language query input
+    st.markdown("---")
+    st.subheader("💬 Ask a Question in Natural Language")
+
+    question = st.text_input(
+        "What would you like to query?",
+        placeholder="e.g., Show me all users who joined in 2024",
+    )
+
+    if st.button("🧠 Generate SQL", type="primary") and question:
+        with st.spinner("Generating SQL query..."):
+            schema_text_for_llm = schema_to_text(schema_info)
+            sql_query, error = generate_sql_query(client, schema_text_for_llm, question)
+
+        if error:
+            st.error(error)
+        else:
+            st.markdown("### 📝 Generated SQL Query")
+            st.code(sql_query, language="sql")
+
+            # Execute the query
+            with st.spinner("Executing query..."):
+                rows, columns, exec_error = execute_query(engine, sql_query)
+
+            if exec_error:
+                st.error(f"❌ {exec_error}")
+            else:
+                st.markdown("### 📊 Query Results")
+
+                if len(rows) == 0:
+                    st.info("Query executed successfully. No rows returned.")
+                else:
+                    # Convert to dictionary format for dataframe
+                    result_data = [dict(zip(columns, row)) for row in rows]
+                    st.dataframe(result_data, use_container_width=True)
+
+                    st.caption(f"Showing {len(rows)} row(s)")
+
+else:
+    st.info("👈 Upload a SQL file or paste your schema above to get started!")
