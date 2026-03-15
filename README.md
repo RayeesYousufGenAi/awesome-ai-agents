@@ -77,14 +77,14 @@ Run all agents at once with Docker Compose:
 
 ```bash
 export OPENAI_API_KEY="your-key-here"
-docker-compose up
+docker compose up
 ```
 
 Or run in detached mode (background):
 
 ```bash
 export OPENAI_API_KEY="your-key-here"
-docker-compose up -d
+docker compose up -d
 ```
 
 **Service Ports:**
