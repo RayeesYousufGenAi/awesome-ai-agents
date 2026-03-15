@@ -300,9 +300,6 @@ Your sponsorship helps me:
   <a href="https://github.com/sponsors/RayeesYousufGenAi">
     <img src="https://img.shields.io/badge/Sponsor_Me_On_GitHub-💖-ff69b4?style=for-the-badge&logo=github" />
   </a>
-  <a href="https://www.buymeacoffee.com/rayeesyousuf">
-    <img src="https://img.shields.io/badge/Buy_Me_A_Coffee-☕-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
-  </a>
   <a href="https://paypal.me/rayeesyousuf">
     <img src="https://img.shields.io/badge/Donate_via_PayPal-💳-00457C?style=for-the-badge&logo=paypal" />
   </a>
