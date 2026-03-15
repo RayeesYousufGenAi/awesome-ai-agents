@@ -12,8 +12,13 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text, inspect
 from sqlalchemy.exc import SQLAlchemyError
+import sqlparse
 
 load_dotenv()
+
+# Validate OPENAI_API_KEY before creating client
+if not os.environ.get("OPENAI_API_KEY"):
+    raise ValueError("OPENAI_API_KEY environment variable is required")
 
 st.set_page_config(page_title="🗄️ AI SQL Query Generator", page_icon="🗄️", layout="wide")
 st.title("🗄️ AI SQL Query Generator")
@@ -46,14 +51,45 @@ def extract_schema_from_sql(sql_content: str) -> str:
 def execute_schema_sql(engine, sql_content: str) -> tuple[bool, str]:
     """Execute SQL schema statements to set up the database."""
     try:
-        # Split SQL into individual statements
-        statements = [s.strip() for s in re.split(r';\s*', sql_content) if s.strip()]
+        # Split SQL into individual statements using sqlparse for better parsing
+        parsed_statements = sqlparse.parse(sql_content)
+        statements = [stmt for stmt in parsed_statements if stmt.strip()]
+
+        # Limit number of statements to prevent DoS from large uploads
+        MAX_STATEMENTS = 500
+        if len(statements) > MAX_STATEMENTS:
+            return False, f"Too many SQL statements. Maximum allowed: {MAX_STATEMENTS}"
+
+        # Allowed statement types for schema initialization
+        ALLOWED_TYPES = {'CREATE', 'INSERT', 'ALTER', 'DROP'}
+        # Keywords that are dangerous (e.g., DROP DATABASE, DROP TABLE hints)
+        DANGEROUS_KEYWORDS = {'DATABASE', 'USER', 'ROLE'}
 
         with engine.connect() as conn:
             for statement in statements:
-                # Skip non-DDL/DML statements
-                if any(keyword in statement.upper() for keyword in ['CREATE', 'INSERT', 'ALTER', 'DROP']):
-                    conn.execute(text(statement))
+                stmt_str = str(statement).strip()
+                if not stmt_str:
+                    continue
+
+                # Parse the statement to get token types
+                parsed = sqlparse.parse(stmt_str)[0]
+                first_token = parsed.token_first()
+
+                if not first_token:
+                    continue
+
+                # Get the statement type from the first token
+                token_value = first_token.value.upper()
+
+                # Strict validation: only allow CREATE/INSERT/ALTER statements
+                if token_value in ALLOWED_TYPES:
+                    # Additional safety check for dangerous keywords
+                    stmt_upper = stmt_str.upper()
+                    if any(kw in stmt_upper for kw in DANGEROUS_KEYWORDS):
+                        return False, f"SQL Error: Dangerous keyword detected in: {stmt_str[:50]}..."
+
+                    conn.execute(text(stmt_str))
+
             conn.commit()
         return True, "Schema loaded successfully"
     except SQLAlchemyError as e:
@@ -99,8 +135,41 @@ def schema_to_text(schema_info: dict) -> str:
     return "\n".join(lines)
 
 
+def detect_prompt_injection(question: str) -> tuple[bool, str]:
+    """Detect potential prompt injection attempts in user input."""
+    # Suspicious patterns that indicate prompt injection
+    suspicious_patterns = [
+        r'ignore\s+(previous|above|all)\s+(instructions?|context|text)',
+        r'forget\s+(everything|all|previous)',
+        r'you\s+are\s+now',
+        r'act\s+as\s+(if|though)',
+        r'pretend\s+to\s+be',
+        r'system\s*:',  # Attempting to set system role
+        r'user\s*:',  # Attempting to inject user messages
+        r'assistant\s*:',  # Attempting to inject assistant responses
+        r'do\s+(not|not\s+any)\s+(explain|return|provide)',
+        r'{.*}.*\n*{.*}',  # Multiple braces/brackets that might be trying to format
+    ]
+
+    question_lower = question.lower()
+    for pattern in suspicious_patterns:
+        if re.search(pattern, question_lower):
+            return True, f"Potential prompt injection detected: pattern '{pattern}'"
+
+    # Check for unusual characters that might be injection attempts
+    if question.count('"') > 10 or question.count("'") > 10:
+        return True, "Excessive quote characters detected"
+
+    return False, ""
+
+
 def generate_sql_query(client: OpenAI, schema: str, question: str) -> tuple[str, str]:
     """Use OpenAI GPT-4 to generate SQL from natural language."""
+    # Check for prompt injection before processing
+    is_suspicious, injection_msg = detect_prompt_injection(question)
+    if is_suspicious:
+        return "", f"Security Error: {injection_msg}"
+
     try:
         prompt = f"""Given the following database schema:
 
@@ -120,12 +189,14 @@ The query should be compatible with SQLite syntax."""
                     "content": (
                         "You are an expert SQL query generator. "
                         "Convert natural language questions to accurate SQL queries. "
-                        "Return only the SQL query, no explanations or markdown."
+                        "Return only the SQL query, no explanations or markdown. "
+                        "IMPORTANT: Only generate SELECT queries. Do NOT generate DELETE, UPDATE, INSERT, DROP, or other modifying statements."
                     ),
                 },
                 {"role": "user", "content": prompt},
             ],
             temperature=0.1,
+            timeout=30.0,  # 30 second timeout to prevent indefinite hangs
         )
 
         sql = response.choices[0].message.content.strip()
@@ -139,8 +210,47 @@ The query should be compatible with SQLite syntax."""
         return "", f"Error generating SQL: {str(e)}"
 
 
+def is_safe_sql_query(query: str) -> tuple[bool, str]:
+    """Validate that a SQL query is safe to execute."""
+    # Parse the query using sqlparse
+    parsed = sqlparse.parse(query)
+
+    if not parsed:
+        return False, "Could not parse SQL query"
+
+    # Only allow SELECT statements
+    for statement in parsed:
+        if not statement.strip():
+            continue
+
+        first_token = statement.token_first()
+        if not first_token:
+            return False, "Empty SQL statement"
+
+        token_type = first_token.ttype
+        token_value = first_token.value.upper()
+
+        # Only allow SELECT statements (not INSERT, UPDATE, DELETE, DROP, etc.)
+        if token_value != 'SELECT':
+            return False, f"Only SELECT queries are allowed. Found: {token_value}"
+
+        # Check for dangerous keywords in the query
+        dangerous_keywords = ['DROP', 'DELETE', 'TRUNCATE', 'EXEC', 'EXECUTE', 'CALL']
+        query_upper = query.upper()
+        for keyword in dangerous_keywords:
+            if keyword in query_upper:
+                return False, f"Query contains dangerous keyword: {keyword}"
+
+    return True, ""
+
+
 def execute_query(engine, query: str) -> tuple[list, list, str]:
     """Execute SQL query and return results."""
+    # Validate query before execution
+    is_safe, error_msg = is_safe_sql_query(query)
+    if not is_safe:
+        return [], [], f"SQL Security Error: {error_msg}"
+
     try:
         with engine.connect() as conn:
             result = conn.execute(text(query))
