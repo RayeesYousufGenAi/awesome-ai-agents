@@ -9,6 +9,13 @@ services:
       - "8501:8501"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   rag-assistant:
     build:
@@ -18,6 +25,15 @@ services:
       - "8502:8501"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    volumes:
+      - rag-chromadb:/app/chromadb
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   code-reviewer:
     build:
@@ -27,6 +43,13 @@ services:
       - "8503:8501"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   data-analyst:
     build:
@@ -36,6 +59,13 @@ services:
       - "8504:8501"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
 
   web-researcher:
     build:
@@ -45,3 +75,13 @@ services:
       - "8505:8501"
     environment:
       - OPENAI_API_KEY=${OPENAI_API_KEY}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  rag-chromadb:
