@@ -7,11 +7,12 @@ Author: Rayees Yousuf (@RayeesYousufGenAi)
 
 import os
 import re
+import unicodedata
 import streamlit as st
+import openai
 from openai import OpenAI
 from dotenv import load_dotenv
 from fpdf import FPDF
-from io import BytesIO
 
 load_dotenv()
 
@@ -20,6 +21,20 @@ st.title("📄 AI Resume Builder")
 st.caption("Create professional resumes with AI-powered content generation and PDF export")
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
+
+
+def sanitize_filename(name):
+    """Sanitize filename to prevent path traversal and special character issues."""
+    # Remove path separators and other unsafe characters
+    safe_name = re.sub(r'[<>:"/\\|?*]', '', name)
+    # Replace spaces with underscores
+    safe_name = safe_name.replace(' ', '_')
+    # Normalize unicode (remove accents, etc.)
+    safe_name = ''.join(c for c in unicodedata.normalize('NFKD', safe_name)
+                       if unicodedata.category(c) != 'Mn')
+    # Limit length
+    safe_name = safe_name[:50]
+    return safe_name
 
 
 def generate_resume_content(personal_info, experience, skills, education):
@@ -78,10 +93,10 @@ SKILLS:
                 },
                 {"role": "user", "content": prompt},
             ],
-            temperature=0.7,
+            temperature=0.3,
         )
         return response.choices[0].message.content
-    except Exception as e:
+    except (openai.RateLimitError, openai.AuthenticationError, openai.APIError) as e:
         st.error(f"Error generating content: {e}")
         return None
 
@@ -93,18 +108,18 @@ def parse_generated_content(content):
     if not content:
         return sections
 
-    # Extract summary
-    summary_match = re.search(r"SUMMARY:(.+?)(?=EXPERIENCE:|SKILLS:|$)", content, re.DOTALL)
+    # Extract summary (case-insensitive)
+    summary_match = re.search(r"SUMMARY:(.+?)(?=EXPERIENCE:|SKILLS:|$)", content, re.DOTALL | re.IGNORECASE)
     if summary_match:
         sections["summary"] = summary_match.group(1).strip()
 
-    # Extract experience
-    exp_match = re.search(r"EXPERIENCE:(.+?)(?=SKILLS:|$)", content, re.DOTALL)
+    # Extract experience (case-insensitive)
+    exp_match = re.search(r"EXPERIENCE:(.+?)(?=SKILLS:|$)", content, re.DOTALL | re.IGNORECASE)
     if exp_match:
         sections["experience"] = exp_match.group(1).strip()
 
-    # Extract skills
-    skills_match = re.search(r"SKILLS:(.+?)$", content, re.DOTALL)
+    # Extract skills (case-insensitive)
+    skills_match = re.search(r"SKILLS:(.+?)$", content, re.DOTALL | re.IGNORECASE)
     if skills_match:
         sections["skills"] = skills_match.group(1).strip()
 
@@ -207,7 +222,7 @@ def create_modern_pdf(personal_info, sections, experience, education):
     pdf.set_text_color(60, 60, 60)
     pdf.multi_cell(0, 6, sections.get("skills", ""))
 
-    return pdf.output(dest="S").encode("latin1")
+    return pdf.output(dest="S").encode("latin-1", errors="replace")
 
 
 def create_classic_pdf(personal_info, sections, experience, education):
@@ -259,7 +274,7 @@ def create_classic_pdf(personal_info, sections, experience, education):
     pdf.set_font("Times", "", 11)
     pdf.multi_cell(0, 6, sections.get("skills", ""))
 
-    return pdf.output(dest="S").encode("latin1")
+    return pdf.output(dest="S").encode("latin-1", errors="replace")
 
 
 def create_minimal_pdf(personal_info, sections, experience, education):
@@ -317,7 +332,7 @@ def create_minimal_pdf(personal_info, sections, experience, education):
     pdf.set_text_color(50, 50, 50)
     pdf.multi_cell(0, 5, sections.get("skills", ""))
 
-    return pdf.output(dest="S").encode("latin1")
+    return pdf.output(dest="S").encode("latin-1", errors="replace")
 
 
 def generate_pdf(personal_info, sections, experience, education, template):
@@ -336,9 +351,14 @@ with st.sidebar:
 
     # Personal Info
     st.subheader("Personal Info")
-    name = st.text_input("Full Name", placeholder="Jane Doe")
-    email = st.text_input("Email", placeholder="jane@example.com")
-    phone = st.text_input("Phone", placeholder="+1 (555) 123-4567")
+    name = st.text_input("Full Name", placeholder="Jane Doe", max_chars=100)
+    email = st.text_input("Email", placeholder="jane@example.com", max_chars=100)
+    phone = st.text_input("Phone", placeholder="+1 (555) 123-4567", max_chars=50)
+
+    # Validate email format
+    email_valid = re.match(r"[^@]+@[^@]+\.[^@]+", email) if email else False
+    if email and not email_valid:
+        st.warning("Please enter a valid email address")
 
     # Experience
     st.subheader("Experience")
@@ -361,9 +381,15 @@ with st.sidebar:
                 })
                 st.rerun()
 
-    # Display added experience
+    # Display added experience with remove button
     for i, exp in enumerate(st.session_state.experience):
-        st.caption(f"✓ {exp['title']} at {exp['company']}")
+        col1, col2 = st.columns([0.85, 0.15])
+        with col1:
+            st.caption(f"✓ {exp['title']} at {exp['company']}")
+        with col2:
+            if st.button("✕", key=f"remove_exp_{i}", help="Remove this experience"):
+                st.session_state.experience.pop(i)
+                st.rerun()
 
     # Skills
     st.subheader("Skills")
@@ -392,9 +418,15 @@ with st.sidebar:
                 })
                 st.rerun()
 
-    # Display added education
+    # Display added education with remove button
     for i, edu in enumerate(st.session_state.education):
-        st.caption(f"✓ {edu['degree'][:30]}...")
+        col1, col2 = st.columns([0.85, 0.15])
+        with col1:
+            st.caption(f"✓ {edu['degree'][:30]}...")
+        with col2:
+            if st.button("✕", key=f"remove_edu_{i}", help="Remove this education"):
+                st.session_state.education.pop(i)
+                st.rerun()
 
     # Template Selection
     st.subheader("Template")
@@ -453,7 +485,7 @@ if generate_btn and name and email and st.session_state.experience:
             st.download_button(
                 label="📥 Download PDF",
                 data=pdf_bytes,
-                file_name=f"{name.replace(' ', '_')}_Resume.pdf",
+                file_name=f"{sanitize_filename(name)}_Resume.pdf",
                 mime="application/pdf",
                 use_container_width=True,
             )
