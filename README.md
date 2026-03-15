@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/agents-5+-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/agents-6+-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -64,6 +64,7 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 3 | [🔍 Code Reviewer](agents/code-reviewer/) | AI code review with bug detection | OpenAI GPT-4, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 4 | [📊 Data Analyst](agents/data-analyst/) | Upload CSV, get AI-powered insights | OpenAI, Pandas, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 5 | [🌐 Web Researcher](agents/web-researcher/) | Research topics with AI + web scraping | OpenAI, BeautifulSoup | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 6 | [📄 Resume Builder](agents/resume-builder/) | Create professional resumes from user input | OpenAI, FPDF, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
