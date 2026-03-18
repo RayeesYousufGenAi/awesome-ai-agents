@@ -65,6 +65,7 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 4 | [📊 Data Analyst](agents/data-analyst/) | Upload CSV, get AI-powered insights | OpenAI, Pandas, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 5 | [🌐 Web Researcher](agents/web-researcher/) | Research topics with AI + web scraping | OpenAI, BeautifulSoup | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 6 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize YouTube videos from transcripts | OpenAI, youtube-transcript-api | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 7 | [Resume Builder](agents/resume-builder/) | Create professional resumes from user input | OpenAI, FPDF, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
