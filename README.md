@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Agents-40+-blueviolet?style=for-the-badge&logo=ai" />
+  <img src="https://img.shields.io/badge/Agents-50+-blueviolet?style=for-the-badge&logo=ai" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -99,6 +99,16 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 38 | [🧾 Invoice Gen](agents/invoice-gen/) | Itemized invoices from messy work logs | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 39 | [💸 Tax Assistant](agents/tax-assistant/) | Freelance tax deduction guidance | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 40 | [📜 Contract Compare](agents/contract-compare/) | Semantic diffing for legal contracts | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 41 | [🔐 Privacy Analyst](agents/privacy-analyst/) | Policy auditing & privacy grading | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 42 | [🎬 YouTube Gen](agents/youtube-desc-gen/) | SEO metadata, timestamps & tags | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 43 | [👤 Bio Optimizer](agents/bio-optimizer/) | High-conversion social profile bios | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 44 | [🗄️ SQL Optimizer](agents/sql-optimizer/) | Query bottleneck detection & fixes | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 45 | [💪 Workout Planner](agents/workout-coach/) | Customized training routines by equipment | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 46 | [📊 Pitch Deck Gen](agents/pitch-deck-gen/) | VC-standard startup deck outlines | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 47 | [🌎 Domain Finder](agents/domain-finder/) | Catchy domain & project naming | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 48 | [📞 Cold Call Gen](agents/cold-call-gen/) | High-conversion non-cringe sales scripts | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 49 | [🆕 Release Notes Gen](agents/release-notes-gen/) | Tech logs to user-friendly updates | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 50 | [🤖 Agent Master](agents/agent-master-template/) | Instant generator for the next 950 agents | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
@@ -258,7 +268,7 @@ Check our [open issues with the `new-agent` label](https://github.com/RayeesYous
 We are on a mission to build **50+ production-ready AI agents**. This repository is not just a collection; it's a growing ecosystem for developers to learn and build real-world AI applications.
 
 **Current Progress:**
-`40/1000` [🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜] **4% Complete**
+`50/1000` [🟦🟦🟦🟦🟦🟦⬜⬜⬜⬜] **5% Complete**
 
 > [!TIP]
 > **Want to contribute?** Check our [**IDEAS_BANK.md**](IDEAS_BANK.md) for 100+ agent ideas across every industry! Pick an idea, build it, and help us reach 1000.
