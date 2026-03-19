@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Agents-30+-blueviolet?style=for-the-badge&logo=ai" />
+  <img src="https://img.shields.io/badge/Agents-40+-blueviolet?style=for-the-badge&logo=ai" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -89,6 +89,16 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 28 | [📜 Patent Searcher](agents/patent-searcher/) | Analyze invention novelty & prior art | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 29 | [🎵 Lyrics Writer](agents/lyrics-writer/) | Song lyrics generator for any genre | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 30 | [🍳 Recipe Gen](agents/recipe-gen/) | Custom recipes based on fridge items | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 31 | [🎨 Prompt Engineer](agents/prompt-engineer/) | Viral art prompts for Midjourney/DALL-E | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 32 | [🎬 Vibe Recommender](agents/recommender-bot/) | Niche movie & book picks by 'vibe' | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 33 | [🏷️ Price Monitor](agents/price-tracker/) | Evaluate if a product is a good deal | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 34 | [📊 Survey Analyzer](agents/survey-analyzer/) | Extract insights from raw feedback | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 35 | [📡 Competitor Intel](agents/competitor-monitor/) | Analyze competitor strategy & moat | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 36 | [🪴 Plant Doctor](agents/plant-doctor/) | Diagnose plant issues & recovery plan | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 37 | [🏗️ Code Diagrammer](agents/code-to-diagram/) | Create Mermaid diagrams from code | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 38 | [🧾 Invoice Gen](agents/invoice-gen/) | Itemized invoices from messy work logs | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 39 | [💸 Tax Assistant](agents/tax-assistant/) | Freelance tax deduction guidance | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 40 | [📜 Contract Compare](agents/contract-compare/) | Semantic diffing for legal contracts | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
@@ -248,7 +258,7 @@ Check our [open issues with the `new-agent` label](https://github.com/RayeesYous
 We are on a mission to build **50+ production-ready AI agents**. This repository is not just a collection; it's a growing ecosystem for developers to learn and build real-world AI applications.
 
 **Current Progress:**
-`30/1000` [🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜] **3% Complete**
+`40/1000` [🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜] **4% Complete**
 
 > [!TIP]
 > **Want to contribute?** Check our [**IDEAS_BANK.md**](IDEAS_BANK.md) for 100+ agent ideas across every industry! Pick an idea, build it, and help us reach 1000.
