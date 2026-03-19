@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Agents-15+-blueviolet?style=for-the-badge&logo=ai" />
+  <img src="https://img.shields.io/badge/Agents-20+-blueviolet?style=for-the-badge&logo=ai" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -74,6 +74,11 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 13 | [🧪 Unit Test Gen](agents/unit-test-gen/) | Generate Pytest/Unittest suites from code | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 14 | [📉 Stock Sentiment](agents/stock-sentiment/) | Ticker sentiment from news headlines | yFinance, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 15 | [⚖️ Legal Simplifier](agents/legal-simplifier/) | Decode complex legal contracts to English | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 16 | [🐦 Twitter Architect](agents/twitter-architect/) | Viral Twitter/X thread generator | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 17 | [📇 Flashcard Gen](agents/flashcard-gen/) | Generate study flashcards from PDFs | PyPDF, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 18 | [📝 Meeting Summarizer](agents/meeting-minutes/) | Executive summaries & action items from transcripts | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 19 | [🐳 Docker Expert](agents/docker-expert/) | Optimize & secure your Dockerfiles | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 20 | [👨‍🏫 Interview Coach](agents/interview-coach/) | Mock technical interviews with AI feedback | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
@@ -233,7 +238,7 @@ Check our [open issues with the `new-agent` label](https://github.com/RayeesYous
 We are on a mission to build **50+ production-ready AI agents**. This repository is not just a collection; it's a growing ecosystem for developers to learn and build real-world AI applications.
 
 **Current Progress:**
-`15/1000` [🟦🟦⬜⬜⬜⬜⬜⬜⬜⬜] **1.5% Complete**
+`20/1000` [🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜] **2% Complete**
 
 > [!TIP]
 > **Want to contribute?** Check our [**IDEAS_BANK.md**](IDEAS_BANK.md) for 100+ agent ideas across every industry! Pick an idea, build it, and help us reach 1000.
