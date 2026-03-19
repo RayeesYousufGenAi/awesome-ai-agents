@@ -97,11 +97,13 @@ pip install -r requirements.txt
 
 ### 3.1 Set Up Your API Key
 
-Create a `.env` file to store your API key securely:
+Create a `.env` file to store your API key. 
 
-```bash
-echo "OPENAI_API_KEY=your-api-key-here" > .env
-```
+> [!IMPORTANT]
+> **Don't use `echo` to create this file**, as it saves your API key in your terminal history! Instead, open your text editor (VS Code, Nano, etc.), create a new file named `.env`, and paste:
+> ```bash
+> OPENAI_API_KEY=your-api-key-here
+> ```
 
 > ⚠️ **Never commit your `.env` file!** It's already in `.gitignore`.
 

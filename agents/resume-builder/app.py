@@ -24,17 +24,22 @@ client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
 
 def sanitize_filename(name):
-    """Sanitize filename to prevent path traversal and special character issues."""
-    # Remove path separators and other unsafe characters
-    safe_name = re.sub(r'[<>:"/\\|?*]', '', name)
-    # Replace spaces with underscores
-    safe_name = safe_name.replace(' ', '_')
-    # Normalize unicode (remove accents, etc.)
-    safe_name = ''.join(c for c in unicodedata.normalize('NFKD', safe_name)
-                       if unicodedata.category(c) != 'Mn')
+    """Robustly sanitize filename to prevent path traversal and special character issues."""
+    # Convert to string and handle None
+    name = str(name or "Resume")
+    # Normalize unicode to NFKD and remove non-spacing marks (accents)
+    name = "".join(
+        c for c in unicodedata.normalize("NFKD", name) if unicodedata.category(c) != "Mn"
+    )
+    # Replace anything that isn't alphanumeric, space, dot, underscore, or hyphen
+    name = re.sub(r"[^A-Za-z0-9 _.-]+", "", name)
+    # Replace multiple spaces/underscores with single ones
+    name = re.sub(r"\s+", "_", name).strip("_")
+    # Prevent leading dots (hidden files/relative paths)
+    name = name.lstrip(".")
     # Limit length
-    safe_name = safe_name[:50]
-    return safe_name
+    name = name[:50] or "Resume"
+    return name
 
 
 def generate_resume_content(personal_info, experience, skills, education):

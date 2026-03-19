@@ -21,10 +21,11 @@ st.caption("AI assistant with conversation memory — powered by GPT-4")
 @st.cache_resource
 def init_chain():
     llm = ChatOpenAI(
-        model="gpt-4",
+        model="gpt-4o",
         temperature=0.7,
         api_key=os.environ.get("OPENAI_API_KEY"),
     )
+    # Using ConversationBufferWindowMemory for long-term coherence
     memory = ConversationBufferWindowMemory(k=15)
     chain = ConversationChain(llm=llm, memory=memory, verbose=False)
     return chain
