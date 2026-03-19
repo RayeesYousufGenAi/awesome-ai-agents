@@ -13,7 +13,11 @@
 </p>
 
 <p align="center">
+<<<<<<< Updated upstream
   <img src="https://img.shields.io/badge/agents-6+-blueviolet?style=for-the-badge" />
+=======
+  <img src="https://img.shields.io/badge/Agents-8+-blueviolet?style=for-the-badge&logo=ai" />
+>>>>>>> Stashed changes
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -57,6 +61,7 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 
 ## 🤖 Agents Collection
 
+<<<<<<< Updated upstream
 | # | Agent | Description | Tech Stack | Author |
 |---|-------|-------------|------------|--------|
 | 1 | [🤖 Smart Chatbot](agents/chatbot/) | Conversational AI with memory | LangChain, GPT-4, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
@@ -66,6 +71,18 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 5 | [🌐 Web Researcher](agents/web-researcher/) | Research topics with AI + web scraping | OpenAI, BeautifulSoup | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 6 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize YouTube videos from transcripts | OpenAI, youtube-transcript-api | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 7 | [Resume Builder](agents/resume-builder/) | Create professional resumes from user input | OpenAI, FPDF, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+=======
+| # | Agent | Description | Tech Stack | Run Command |
+|---|-------|-------------|------------|-------------|
+| 01 | [🤖 Smart Chatbot](agents/chatbot/) | Conversational AI with memory | LangChain, GPT-4, Streamlit | `streamlit run app.py` |
+| 02 | [📄 RAG Assistant](agents/rag-assistant/) | Ask questions about PDF documents | LangChain, ChromaDB, GPT-4 | `streamlit run app.py` |
+| 03 | [🔍 Code Reviewer](agents/code-reviewer/) | AI code review with bug detection | OpenAI GPT-4, Streamlit | `streamlit run app.py` |
+| 04 | [📊 Data Analyst](agents/data-analyst/) | Upload CSV, get AI-powered insights | OpenAI, Pandas, Streamlit | `streamlit run app.py` |
+| 05 | [🔍 Web Researcher](agents/web-researcher/) | Research topics or analyze URLs via scraping | BS4, OpenAI, GPT-4 | `streamlit run app.py` |
+| 06 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize videos from transcripts | OpenAI, Transcript API | `streamlit run app.py` |
+| 07 | [📄 Resume Builder](agents/resume-builder/) | Create professional resumes in PDF | OpenAI, FPDF2, GPT-4 | `streamlit run app.py` |
+| 08 | [🔗 LinkedIn Gen](agents/linkedin-generator/) | Generate viral posts from any topic | LangChain, OpenAI | `streamlit run app.py` |
+>>>>>>> Stashed changes
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
@@ -220,7 +237,19 @@ Check our [open issues with the `new-agent` label](https://github.com/RayeesYous
 
 ---
 
-## 📚 Agent Architecture Patterns
+## 🚀 The 50+ Agents Roadmap
+
+We are on a mission to build **50+ production-ready AI agents**. This repository is not just a collection; it's a growing ecosystem for developers to learn and build real-world AI applications.
+
+**Current Progress:**
+`9/50` [🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜] **18% Complete**
+
+> [!TIP]
+> **Want to contribute?** Check our [**ROADMAP.md**](ROADMAP.md) for a list of 50+ agent ideas looking for builders! You can pick an idea, build it, and get featured as a contributor.
+
+---
+
+## 🏗️ Architecture Patterns
 
 Learn common patterns used across the agents:
 
