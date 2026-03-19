@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Agents-20+-blueviolet?style=for-the-badge&logo=ai" />
+  <img src="https://img.shields.io/badge/Agents-30+-blueviolet?style=for-the-badge&logo=ai" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -79,6 +79,16 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 18 | [📝 Meeting Summarizer](agents/meeting-minutes/) | Executive summaries & action items from transcripts | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 19 | [🐳 Docker Expert](agents/docker-expert/) | Optimize & secure your Dockerfiles | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 20 | [👨‍🏫 Interview Coach](agents/interview-coach/) | Mock technical interviews with AI feedback | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 21 | [🏷️ Brand Name Gen](agents/brand-name-gen/) | Generate catchy startup & product names | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 22 | [📸 Insta Caption Writer](agents/insta-caption-writer/) | Viral Instagram captions with hashtags | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 23 | [📖 API Doc Bot](agents/api-doc-gen/) | Convert code to clean API documentation | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 24 | [🎋 Git Assistant](agents/git-assistant/) | Meaningful commit messages from diffs | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 25 | [🌎 Language Tutor](agents/language-tutor/) | Conversation partner with grammar review | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 26 | [✈️ Travel Planner](agents/travel-planner/) | Custom itineraries based on budget | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 27 | [💸 Expense Tracker](agents/expense-tracker/) | Auto-categorize spending from logs | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 28 | [📜 Patent Searcher](agents/patent-searcher/) | Analyze invention novelty & prior art | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 29 | [🎵 Lyrics Writer](agents/lyrics-writer/) | Song lyrics generator for any genre | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 30 | [🍳 Recipe Gen](agents/recipe-gen/) | Custom recipes based on fridge items | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
@@ -238,7 +248,7 @@ Check our [open issues with the `new-agent` label](https://github.com/RayeesYous
 We are on a mission to build **50+ production-ready AI agents**. This repository is not just a collection; it's a growing ecosystem for developers to learn and build real-world AI applications.
 
 **Current Progress:**
-`20/1000` [🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜] **2% Complete**
+`30/1000` [🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜] **3% Complete**
 
 > [!TIP]
 > **Want to contribute?** Check our [**IDEAS_BANK.md**](IDEAS_BANK.md) for 100+ agent ideas across every industry! Pick an idea, build it, and help us reach 1000.
