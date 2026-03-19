@@ -64,9 +64,9 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 03 | [🔍 Code Reviewer](agents/code-reviewer/) | AI code review with bug detection | OpenAI GPT-4, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 04 | [📊 Data Analyst](agents/data-analyst/) | Upload CSV, get AI-powered insights | OpenAI, Pandas, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 05 | [🌐 Web Researcher](agents/web-researcher/) | Research topics with AI + web scraping | OpenAI, BeautifulSoup | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 06 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize YouTube videos from transcripts | OpenAI, youtube-transcript-api | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 07 | [📄 Resume Builder](agents/resume-builder/) | Create professional resumes from user input | OpenAI, FPDF, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 08 | [📧 AI Email Writer](agents/email-writer/) | Professional email generator with tone selection | Gemini API, Streamlit | [@Bijaykund8](https://github.com/Bijaykund8) |
+| 06 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize YouTube videos from transcripts | OpenAI, youtube-transcript-api | [@llrightll](https://github.com/llrightll) |
+| 07 | [📄 Resume Builder](agents/resume-builder/) | Create professional resumes from user input | OpenAI, FPDF, Streamlit | [@llrightll](https://github.com/llrightll) |
+| 08 | [📧 AI Email Writer](agents/email-writer/) | Professional email generator with tone selection | Gemini API, Streamlit | [@Bijaykund8](https://github.com/Bijaykund8) & [@rishi250111256-collab](https://github.com/rishi250111256-collab) |
 | 09 | [🔗 LinkedIn Gen](agents/linkedin-generator/) | Generate viral posts from any topic | LangChain, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 10 | [🧬 ArXiv Analyzer](agents/arxiv-analyzer/) | Search & summarize scientific research papers | ArXiv, LangChain, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 11 | [📈 SEO Optimizer](agents/seo-optimizer/) | Generate meta-tags and SEO content tips | OpenAI, LangChain | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
