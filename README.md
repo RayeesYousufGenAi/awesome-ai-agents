@@ -1,402 +1,160 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Awesome AI Agents" width="200" />
+  <img src="assets/logo_v2.png" alt="Awesome AI Agents" width="400" />
 </p>
 
-<h1 align="center">🤖 Awesome AI Agents</h1>
+<h1 align="center">⚡ Awesome AI Agents ⚡</h1>
 
 <p align="center">
-  <strong>A curated collection of production-ready AI agents with working code. Fork → Build → PR → Get credited!</strong>
-</p>
-
-<p align="center">
-  <em>Open-source, community-driven, and always growing. ⭐ Star to bookmark. 🍴 Fork to contribute.</em>
+  <strong>The Ultimate Open-Source Hub for 1000+ Production-Ready AI Agents</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/agents-6+-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Agents-60+-blueviolet?style=for-the-badge&logo=openai&logoColor=white" />
+  <img src="https://img.shields.io/badge/Mission-1000_Agents-FFD700?style=for-the-badge&logo=target" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/RayeesYousufGenAi/awesome-ai-agents/stargazers"><img src="https://img.shields.io/github/stars/RayeesYousufGenAi/awesome-ai-agents?style=for-the-badge&color=gold" /></a>
+  <a href="https://github.com/RayeesYousufGenAi/awesome-ai-agents/network/members"><img src="https://img.shields.io/github/forks/RayeesYousufGenAi/awesome-ai-agents?style=for-the-badge&color=blue" /></a>
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/stars/RayeesYousufGenAi/awesome-ai-agents?style=for-the-badge&color=gold" />
-  <img src="https://img.shields.io/github/forks/RayeesYousufGenAi/awesome-ai-agents?style=for-the-badge&color=blue" />
-  <img src="https://img.shields.io/github/issues/RayeesYousufGenAi/awesome-ai-agents?style=for-the-badge&color=red" />
-  <img src="https://img.shields.io/github/contributors/RayeesYousufGenAi/awesome-ai-agents?style=for-the-badge&color=orange" />
-</p>
+---
 
-<p align="center">
-  <a href="#-agents-collection">🤖 Agents</a> •
-  <a href="#-quick-start">🚀 Quick Start</a> •
-  <a href="#-how-to-contribute-your-own-agent">🤝 Contribute</a> •
-  <a href="#-propose-a-new-agent">💡 Propose</a> •
-  <a href="#-sponsors--support">💖 Sponsor</a> •
-  <a href="#-community">💬 Community</a>
-</p>
+## 🚀 The Mission: 1000+ Production Agents
+We are building the largest, most comprehensive collection of **working AI agents** in the world. No fluff, no broken code. Every directory contains a full-stack, production-ready agent that you can run in seconds.
+
+### 🌟 Why This Hub?
+- **✅ Working Code First**: Every agent is tested and includes a `requirements.txt`.
+- **🛠️ Production Patterns**: Learn real-world RAG, Agents, and Tools.
+- **🤝 Community Owned**: We celebrate contributors. Every PR gets your name on the board!
+- **⚡ Rapid Scaling**: Our **Agent Master Template** allows us to build and deploy 10+ agents per batch.
 
 ---
 
-## 🎯 What Is This?
-
-An **open-source collection of AI agents** that you can run, learn from, and contribute to. Each agent is a standalone application with working code, documentation, and dependencies — ready to run in minutes.
-
-### Why This Repo?
-
-| 🔥 Feature | Description |
-|-------------|-------------|
-| **Working Code** | Every agent runs out of the box — no broken examples |
-| **Community-Driven** | Anyone can contribute new agents via Pull Requests |
-| **Well-Documented** | Each agent has its own README with setup instructions |
-| **Production Patterns** | Learn real-world AI agent architecture patterns |
-| **Always Growing** | New agents added by the community every week |
-
-> 🍴 **Want to contribute?** Fork this repo, add your agent, and submit a PR. Your name goes in the Contributors section! See the [Contributing Guide](#-how-to-contribute-your-own-agent) below.
-
----
-
-## 🤖 Agents Collection
+## 🤖 Agents Collection (60+ Live)
 
 | # | Agent | Description | Tech Stack | Author |
 |---|-------|-------------|------------|--------|
-| 1 | [🤖 Smart Chatbot](agents/chatbot/) | Conversational AI with memory | LangChain, GPT-4, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 2 | [📄 RAG Assistant](agents/rag-assistant/) | Ask questions about PDF documents | LangChain, ChromaDB, GPT-4 | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 3 | [🔍 Code Reviewer](agents/code-reviewer/) | AI code review with bug detection | OpenAI GPT-4, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 4 | [📊 Data Analyst](agents/data-analyst/) | Upload CSV, get AI-powered insights | OpenAI, Pandas, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 5 | [🌐 Web Researcher](agents/web-researcher/) | Research topics with AI + web scraping | OpenAI, BeautifulSoup | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 6 | [🗄️ SQL Query Generator](agents/sql-generator/) | Natural language to SQL query converter | OpenAI, SQLAlchemy, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-| 7 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize YouTube videos from transcripts | OpenAI, youtube-transcript-api | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
-
-> 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
-
----
-
-## 🚀 Quick Start
-
-### Option 1: Using Docker (Recommended)
-
-Run all agents at once with Docker Compose:
-
-```bash
-export OPENAI_API_KEY="your-key-here"
-docker compose up
-```
-
-Or run in detached mode (background):
-
-```bash
-export OPENAI_API_KEY="your-key-here"
-docker compose up -d
-```
-
-**Service Ports:**
-
-| Service | Port | URL |
-|---------|------|-----|
-| Chatbot | 8501 | http://localhost:8501 |
-| RAG Assistant | 8502 | http://localhost:8502 |
-| Code Reviewer | 8503 | http://localhost:8503 |
-| Data Analyst | 8504 | http://localhost:8504 |
-| Web Researcher | 8505 | http://localhost:8505 |
-
-### Option 2: Manual Setup
-
-#### 1. Clone the repo
-
-```bash
-git clone https://github.com/RayeesYousufGenAi/awesome-ai-agents.git
-cd awesome-ai-agents
-```
-
-#### 2. Pick an agent and install its dependencies
-
-```bash
-cd agents/chatbot          # or any agent folder
-pip install -r requirements.txt
-```
-
-#### 3. Set your API key
-
-```bash
-export OPENAI_API_KEY="your-key-here"
-```
-
-#### 4. Run it!
-
-```bash
-streamlit run app.py
-```
-
-> 💡 Each agent has its own `README.md` with specific setup instructions.
+| **Core** | | | | |
+| 01 | [🤖 Smart Chatbot](agents/chatbot/) | Conversational AI with memory | LangChain, GPT-4 | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 02 | [📄 RAG Assistant](agents/rag-assistant/) | Chat with your PDFs & Docs | LangChain, ChromaDB | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 03 | [🔍 Code Reviewer](agents/code-reviewer/) | AI code review with bug detection | GPT-4, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 04 | [📊 Data Analyst](agents/data-analyst/) | CSV insights & visualization | Pandas, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 05 | [🌐 Web Researcher](agents/web-researcher/) | AI web searching & scraping | BeautifulSoup, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| **Community Highlights** | | | | |
+| 06 | [📺 YouTube Summarizer](agents/youtube-summarizer/) | Summarize YT videos instantly | [@llrightll](https://github.com/llrightll) | ✨ |
+| 07 | [📄 Resume Builder](agents/resume-builder/) | Career-ready professional resumes | [@llrightll](https://github.com/llrightll) | ✨ |
+| 08 | [📧 AI Email Writer](agents/email-writer/) | Tone-aware professional emails | [@Bijaykund8](https://github.com/Bijaykund8) & [@rishi250111256-collab](https://github.com/rishi250111256-collab) | ✨ |
+| 09 | [🗄️ SQL Generator](agents/sql-generator/) | Natural language to Secure SQL | [@llrightll](https://github.com/llrightll) | 🛡️ |
+| **Expansion Batch** | | | | |
+| 10 | [🧬 ArXiv Analyzer](agents/arxiv-analyzer/) | Scientific research paper auditor | ArXiv, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 11 | [📈 SEO Optimizer](agents/seo-optimizer/) | Marketing & SEO meta-tag gen | OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 12 | [📧 Email Personalizer](agents/email-personalizer/) | Hyper-personalized cold outreach | OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 13 | [🧪 Unit Test Gen](agents/unit-test-gen/) | Pytest/Unittest suite generation | OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 14 | [📉 Stock Sentiment](agents/stock-sentiment/) | Ticker sentiment from finance news | yFinance, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 15 | [⚖️ Legal Simplifier](agents/legal-simplifier/) | Complex legal jargon decoder | GPT-4o | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 16 | [🐦 Twitter Architect](agents/twitter-architect/) | Viral thread builder for X | GPT-4o | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 17 | [📇 Flashcard Gen](agents/flashcard-gen/) | Study cards from massive PDFs | PyPDF | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 18 | [📝 Meeting Summarizer](agents/meeting-minutes/) | Action items from transcripts | GPT-4o | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 19 | [🐳 Docker Expert](agents/docker-expert/) | Optimize & secure Dockerfiles | DevOps AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 20 | [👨‍🏫 Interview Coach](agents/interview-coach/) | Technical mock interview AI | Career AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 21 | [🏷️ Brand Name Gen](agents/brand-name-gen/) | Catchy startup naming engine | Branding AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 22 | [📸 Insta Caption](agents/insta-caption-writer/) | Viral captions with hashtags | Social AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 23 | [📖 API Doc Bot](agents/api-doc-gen/) | Code to clean documentation | Documentation | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 24 | [🎋 Git Assistant](agents/git-assistant/) | Auto-commit messages from diffs | Git AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 25 | [🌎 Language Tutor](agents/language-tutor/) | Conversational language partner | Education | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 26 | [✈️ Travel Planner](agents/travel-planner/) | Budget-aware custom itineraries | Travel AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 27 | [💸 Expense Tracker](agents/expense-tracker/) | Auto-categorize spending logs | Finance AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 28 | [📜 Patent Searcher](agents/patent-searcher/) | Novelty & prior art analyzer | Legal AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 29 | [🎵 Lyrics Writer](agents/lyrics-writer/) | AI song lyrics generator | Creative AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 30 | [🍳 Recipe Gen](agents/recipe-gen/) | Recipes from fridge items | Cooking AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 31 | [🎨 Prompt Engineer](agents/prompt-engineer/) | Viral art prompts for Midjourney | Art AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 32 | [🎬 Vibe Recommender](agents/recommender-bot/) | Niche movie & book picks | Entertainment | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 33 | [🏷️ Price Monitor](agents/price-tracker/) | E-commerce deal evaluator | Shopping AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 34 | [📊 Survey Analyzer](agents/survey-analyzer/) | Feedback synthesis engine | Analysis AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 35 | [📡 Competitor Intel](agents/competitor-monitor/) | Strategy & moat analyzer | Business AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 36 | [🪴 Plant Doctor](agents/plant-doctor/) | Diagnose plant diseases & fix | Botanical AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 37 | [🏗️ Code Diagrammer](agents/code-to-diagram/) | Code to Mermaid diagrams | Dev AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 38 | [🧾 Invoice Gen](agents/invoice-gen/) | Billing from messy work logs | Productivity | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 39 | [💸 Tax Assistant](agents/tax-assistant/) | Freelance tax deduction guide | Finance AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 40 | [📜 Contract Compare](agents/contract-compare/) | Semantic diffing for legal doc | Legal AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 41 | [🔐 Privacy Analyst](agents/privacy-analyst/) | Policy auditing & grading | Security AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 42 | [🎬 YouTube Gen](agents/youtube-desc-gen/) | SEO metadata & timestamps | Content AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 43 | [👤 Bio Optimizer](agents/bio-optimizer/) | High-conversion social bios | Branding | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 44 | [🗄️ SQL Optimizer](agents/sql-optimizer/) | Query bottleneck detection | Database AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 45 | [💪 Workout Planner](agents/workout-coach/) | Custom routines by equipment | Health AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 46 | [📊 Pitch Deck Gen](agents/pitch-deck-gen/) | VC-standard startup outlines | Business AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 47 | [🌎 Domain Finder](agents/domain-finder/) | Startup naming & availability | Branding | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 48 | [📞 Cold Call Gen](agents/cold-call-gen/) | Non-cringe sales scripts | Sales AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 49 | [🆕 Release Notes](agents/release-notes-gen/) | Tech logs to user-friendly | Product AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 50 | [🤖 Agent Master](agents/agent-master-template/) | Instant generator for next 900+ | Meta Agent | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| **Expansion Batch 6** | | | | |
+| 51 | [🔗 LinkedIn Gen](agents/linkedin-generator/) | Viral post generator | Social AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 52 | [🌍 Subtitle Trans](agents/subtitle-translator/) | SRT Translation with timing | Media AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 53 | [📅 Content Calendar](agents/content-calendar/) | 30-day social strategy | Content AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 54 | [⚖️ Product Compare](agents/product-compare/) | Side-by-side spec analysis | Shopping | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 55 | [💌 Cover Letter](agents/cover-letter/) | Job-specific career impact | Career AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 56 | [✍️ Grammar Pro](agents/grammar-pro/) | Advanced tone & flow optimization| Writer AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 57 | [🌤️ Standup Gen](agents/standup-gen/) | Notes to professional updates | Business AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 58 | [💻 Stack Recommender](agents/stack-recommender/) | Scalable tech architecture | CTO AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 59 | [💼 Job Post Gen](agents/job-post-gen/) | Catchy & inclusive hiring | HR AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 60 | [🛠️ Code Refactorer](agents/code-refactor/) | Fix spaghetti, improve DRY | Dev AI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 ---
 
-## 🏗️ Project Structure
+## 📈 Road to 1000 Agents
 
-```
-awesome-ai-agents/
-│
-├── 📁 agents/                      # All AI agents live here
-│   ├── 📁 chatbot/                 # Smart conversational agent
-│   │   ├── app.py
-│   │   ├── README.md
-│   │   └── requirements.txt
-│   ├── 📁 rag-assistant/           # PDF Q&A with RAG
-│   ├── 📁 code-reviewer/           # AI code review
-│   ├── 📁 data-analyst/            # CSV data analysis
-│   ├── 📁 web-researcher/          # Topic research + URL analysis
-│   ├── 📁 youtube-summarizer/      # YouTube video summarization
-│   └── 📁 your-agent-here/         # ← Add yours!
-│
-├── 📁 assets/                      # Logos and images
-│
-├── 📁 .github/
-│   ├── PULL_REQUEST_TEMPLATE.md    # PR template with checklist
-│   └── ISSUE_TEMPLATE/
-│       ├── bug_report.md           # Bug report template
-│       ├── new_agent.md            # Propose a new agent
-│       └── feature_request.md      # Request improvements
-│
-├── 📖 README.md                    # You are here
-├── 🤝 CONTRIBUTING.md              # Step-by-step contribution guide
-├── 📜 CODE_OF_CONDUCT.md           # Community guidelines
-├── 📜 LICENSE                      # MIT License
-└── 🚫 .gitignore
-```
+**Current Progress: 6%**
+`60/1000` [🟦🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜]
+
+- [x] Phase 1: Foundation (1-10 Agents)
+- [x] Phase 2: Rapid Growth (11-50 Agents)
+- [/] Phase 3: Vertical Specialization (51-200 Agents) — **IN PROGRESS**
+- [ ] Phase 4: Niche Domination (201-500 Agents)
+- [ ] Phase 5: The 1000 Agents Omega Release
 
 ---
 
-## 🤝 How to Contribute Your Own Agent
+## 🚀 Quick Start (Run any Agent)
 
-We **love** contributions! Adding a new AI agent is the best way to contribute. Here's the quick version:
-
-### Step 1: Fork & Clone
-```bash
-# Click "Fork" button at the top of this page ☝️
-git clone https://github.com/YOUR-USERNAME/awesome-ai-agents.git
-cd awesome-ai-agents
-```
-
-### Step 2: Create Your Agent
-```bash
-mkdir -p agents/your-agent-name
-```
-
-Add these files:
-```
-agents/your-agent-name/
-├── app.py              # Your agent code
-├── README.md           # Documentation
-└── requirements.txt    # Dependencies
-```
-
-### Step 3: Submit a Pull Request
-```bash
-git checkout -b add-agent/your-agent-name
-git add .
-git commit -m "✨ Add: Your Agent Name"
-git push origin add-agent/your-agent-name
-```
-
-Then open a **Pull Request** on GitHub! Our PR template will guide you through the checklist.
-
-### Step 4: Get Credited! 🎉
-
-Once merged, your name and agent appear in this README. You also become a project **contributor**.
-
-> 📖 **Full guide:** See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed step-by-step instructions with templates and requirements.
+1. **Clone the Hub**:
+   ```bash
+   git clone https://github.com/RayeesYousufGenAi/awesome-ai-agents.git
+   cd awesome-ai-agents
+   ```
+2. **Pick an Agent**:
+   ```bash
+   cd agents/chatbot
+   ```
+3. **Install & Run**:
+   ```bash
+   pip install -r requirements.txt
+   streamlit run app.py
+   ```
 
 ---
 
-## 💡 Propose a New Agent
+## 🤝 How to Contribute (Gain XP & Credit!)
 
-Have an idea for a cool AI agent but don't have time to build it? **Propose it!** Someone from the community might pick it up.
+We want YOUR agents! Whether it's a simple script or a complex chain, contribute and get credited.
 
-👉 [**Open a "New Agent" issue →**](https://github.com/RayeesYousufGenAi/awesome-ai-agents/issues/new?template=new_agent.md)
-
-### Agent Ideas Looking for Builders 🔨
-
-Check our [open issues with the `new-agent` label](https://github.com/RayeesYousufGenAi/awesome-ai-agents/labels/new-agent) to find agents that need to be built! These are great for first-time contributors.
+1. **Find an Idea**: Check [**IDEAS_BANK.md**](IDEAS_BANK.md).
+2. **Build it**: Use the [**Agent Master Template**](agents/agent-master-template/) to start fast.
+3. **Submit a PR**: We review fast! ⚡
 
 ---
 
-## 📚 Agent Architecture Patterns
-
-Learn common patterns used across the agents:
-
-### 1. Conversational Agent (Chatbot)
-```mermaid
-graph LR
-    A[User Input] --> B[LangChain]
-    B --> C[LLM - GPT-4]
-    C --> D[Response]
-    B --> E[Memory]
-    E --> B
-```
-
-### 2. RAG (Retrieval-Augmented Generation)
-```mermaid
-graph LR
-    A[📄 Document] --> B[Split Chunks]
-    B --> C[Embed - OpenAI]
-    C --> D[Store - ChromaDB]
-    E[❓ Question] --> F[Embed Query]
-    F --> G[Similarity Search]
-    D --> G
-    G --> H[Top K Chunks]
-    H --> I[LLM + Context]
-    I --> J[✅ Answer]
-```
-
-### 3. Tool-Using Agent
-```mermaid
-graph LR
-    A[User Query] --> B[Agent]
-    B --> C{Which Tool?}
-    C --> D[🔍 Web Search]
-    C --> E[📊 Calculator]
-    C --> F[🗃️ Database]
-    D --> G[Synthesize]
-    E --> G
-    F --> G
-    G --> H[Final Answer]
-```
-
----
-
-## 📊 Tech Stack Overview
-
-| Technology | Used For | Agents |
-|-----------|----------|--------|
-| **OpenAI GPT-4** | Language model | All agents |
-| **LangChain** | Chains & memory | Chatbot, RAG |
-| **ChromaDB** | Vector storage | RAG Assistant |
-| **Streamlit** | Web UI | All agents |
-| **BeautifulSoup** | Web scraping | Web Researcher |
-| **Pandas** | Data processing | Data Analyst |
-
----
-
-## ❓ FAQ
-
-<details>
-<summary><b>How do I get an OpenAI API key?</b></summary>
-
-1. Go to [platform.openai.com](https://platform.openai.com)
-2. Create an account → API Keys → Create new key
-3. Set it as: `export OPENAI_API_KEY="sk-your-key"`
-
-</details>
-
-<details>
-<summary><b>Can I use a different LLM (Claude, Gemini, etc.)?</b></summary>
-
-Yes! Most agents use OpenAI, but you can easily swap the LLM. For example, replace `ChatOpenAI` with `ChatAnthropic` for Claude. Contributions for multi-LLM support are welcome!
-
-</details>
-
-<details>
-<summary><b>How do I add my agent to the collection?</b></summary>
-
-Fork → Add your agent in `agents/your-name/` → Submit a PR. See [CONTRIBUTING.md](CONTRIBUTING.md) for the full step-by-step guide.
-
-</details>
-
-<details>
-<summary><b>My PR was rejected. Why?</b></summary>
-
-Common reasons: code doesn't run, missing README, hardcoded API keys, or duplicate of existing agent. Check the PR template requirements and fix the issues.
-
-</details>
-
-<details>
-<summary><b>Can I use these agents commercially?</b></summary>
-
-Yes! This project is MIT licensed. You can use, modify, and distribute commercially. Just include the license.
-
-</details>
-
----
+## 💡 Propose a New Agent Idea
+Don't see something you need? [**Open an Issue**](https://github.com/RayeesYousufGenAi/awesome-ai-agents/issues/new) with the tag `proposal`.
 
 ## 💖 Sponsors & Support
-
-Building and maintaining high-quality open-source AI agents takes significant time and effort. If you find this repository useful for your learning, projects, or business, please consider supporting the development!
-
-Your sponsorship helps me:
-- Add more advanced AI agents (Voice, Vision, multi-agent frameworks)
-- Maintain and update existing code (API changes, library updates)
-- Create more comprehensive tutorials and documentation
-
-<p align="center">
-  <a href="https://github.com/sponsors/RayeesYousufGenAi">
-    <img src="https://img.shields.io/badge/Sponsor_Me_On_GitHub-💖-ff69b4?style=for-the-badge&logo=github" />
-  </a>
-  <a href="https://paypal.me/rayeesyousuf">
-    <img src="https://img.shields.io/badge/Donate_via_PayPal-💳-00457C?style=for-the-badge&logo=paypal" />
-  </a>
-</p>
-
----
-
-## 💬 Community
-
-| Channel | Link | Purpose |
-|---------|------|---------|
-| 💬 **Discussions** | [GitHub Discussions](https://github.com/RayeesYousufGenAi/awesome-ai-agents/discussions) | Q&A, ideas, show & tell |
-| 🐛 **Bug Reports** | [Open an Issue](https://github.com/RayeesYousufGenAi/awesome-ai-agents/issues/new?template=bug_report.md) | Report broken agents |
-| 🤖 **Propose Agent** | [New Agent Issue](https://github.com/RayeesYousufGenAi/awesome-ai-agents/issues/new?template=new_agent.md) | Suggest new agents |
-| 💡 **Features** | [Feature Request](https://github.com/RayeesYousufGenAi/awesome-ai-agents/issues/new?template=feature_request.md) | Suggest improvements |
-
----
-
-## ⭐ Star History
-
-If you find this collection useful, please **star** the repo! It helps others discover it.
-
-[![Star History Chart](https://api.star-history.com/svg?repos=RayeesYousufGenAi/awesome-ai-agents&type=Date)](https://star-history.com/#RayeesYousufGenAi/awesome-ai-agents&Date)
-
----
-
-## 🙌 Contributors
-
-Thanks to everyone who has contributed agents and improvements!
-
-<a href="https://github.com/RayeesYousufGenAi/awesome-ai-agents/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=RayeesYousufGenAi/awesome-ai-agents" />
-</a>
-
-> 🍴 **Your face could be here!** Fork the repo and submit a PR to get credited.
-
----
-
-## 📜 License
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
----
-
-## 👤 Author
-
-<p align="center">
-  <strong>Rayees Yousuf</strong><br/>
-  AI Automation & Agent Builder
-</p>
-
-<p align="center">
-  <a href="https://www.linkedin.com/in/rayeesyousuf/">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0077B5?style=for-the-badge&logo=linkedin" />
-  </a>
-  <a href="https://github.com/RayeesYousufGenAi">
-    <img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github" />
-  </a>
-</p>
+This project is fueled by the community. If you find these agents helpful, please consider starring the repo or [becoming a sponsor](https://github.com/sponsors/RayeesYousufGenAi).
 
 ---
 
 <p align="center">
-  <strong>⭐ Star this repo</strong> to bookmark it • <strong>🍴 Fork it</strong> to contribute • <strong>📢 Share it</strong> to help others
-</p>
-
-<p align="center">
-  <sub>Built with ❤️ by the community. Every contribution counts. 🚀</sub>
+  Built with ❤️ by the AI Community. Let's reach 1000! 🚀
 </p>

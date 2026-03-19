@@ -18,7 +18,7 @@ load_dotenv()
 
 st.set_page_config(page_title="📄 RAG Assistant", page_icon="📄", layout="centered")
 st.title("📄 RAG Document Assistant")
-st.caption("Upload a PDF and ask questions — powered by RAG + GPT-4")
+st.caption("Upload a PDF and ask questions — powered by RAG + GPT-4o")
 
 # Sidebar for file upload
 with st.sidebar:
@@ -45,7 +45,7 @@ if uploaded_file:
         vectorstore = Chroma.from_documents(chunks, embeddings)
 
         # Build QA chain
-        llm = ChatOpenAI(model="gpt-4", api_key=os.environ.get("OPENAI_API_KEY"))
+        llm = ChatOpenAI(model="gpt-4o", api_key=os.environ.get("OPENAI_API_KEY"))
         qa_chain = RetrievalQA.from_chain_type(
             llm=llm,
             retriever=vectorstore.as_retriever(search_kwargs={"k": 4}),
