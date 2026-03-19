@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Agents-9+-blueviolet?style=for-the-badge&logo=ai" />
+  <img src="https://img.shields.io/badge/Agents-10+-blueviolet?style=for-the-badge&logo=ai" />
   <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MIT-green?style=for-the-badge" />
   <a href="https://github.com/sponsors/RayeesYousufGenAi"><img src="https://img.shields.io/badge/Sponsor-💖-ff69b4?style=for-the-badge&logo=github" /></a>
@@ -68,6 +68,7 @@ An **open-source collection of AI agents** that you can run, learn from, and con
 | 07 | [📄 Resume Builder](agents/resume-builder/) | Create professional resumes from user input | OpenAI, FPDF, Streamlit | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 | 08 | [📧 AI Email Writer](agents/email-writer/) | Professional email generator with tone selection | Gemini API, Streamlit | [@Bijaykund8](https://github.com/Bijaykund8) |
 | 09 | [🔗 LinkedIn Gen](agents/linkedin-generator/) | Generate viral posts from any topic | LangChain, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
+| 10 | [🧬 ArXiv Analyzer](agents/arxiv-analyzer/) | Search & summarize scientific research papers | ArXiv, LangChain, OpenAI | [@RayeesYousufGenAi](https://github.com/RayeesYousufGenAi) |
 
 > 🆕 **Your agent could be next!** See [How to Contribute](#-how-to-contribute-your-own-agent) or [Propose a new agent idea](#-propose-a-new-agent).
 
@@ -227,10 +228,10 @@ Check our [open issues with the `new-agent` label](https://github.com/RayeesYous
 We are on a mission to build **50+ production-ready AI agents**. This repository is not just a collection; it's a growing ecosystem for developers to learn and build real-world AI applications.
 
 **Current Progress:**
-`9/50` [🟦🟦🟦🟦⬜⬜⬜⬜⬜⬜⬜] **18% Complete**
+`10/1000` [🟦⬜⬜⬜⬜⬜⬜⬜⬜⬜] **1% Complete**
 
 > [!TIP]
-> **Want to contribute?** Check our [**ROADMAP.md**](ROADMAP.md) for a list of 50+ agent ideas looking for builders! You can pick an idea, build it, and get featured as a contributor.
+> **Want to contribute?** Check our [**IDEAS_BANK.md**](IDEAS_BANK.md) for 100+ agent ideas across every industry! Pick an idea, build it, and help us reach 1000.
 
 ---
 
