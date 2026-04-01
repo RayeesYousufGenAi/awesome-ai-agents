@@ -1,0 +1,6 @@
+requests
+python-dotenv
+langchain
+openai
+numpy
+pandas
