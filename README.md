@@ -38,6 +38,62 @@ Welcome to the largest, most actively maintained directory of **working AI agent
 
 ---
 
+## 🧭 Explore the Universe (Categories)
+<details open>
+<summary><b>Click to expand</b></summary>
+
+- [🌐 Finance & FinTech](#-finance--fintech)
+- [🌐 Healthcare & Biotech](#-healthcare--biotech)
+- [🌐 DevSecOps & Coding](#-devsecops--coding)
+- [🌐 E-Commerce & Retail](#-e-commerce--retail)
+- [🌐 Content Creation & Marketing](#-content-creation--marketing)
+- [🌐 LegalTech & Compliance](#-legaltech--compliance)
+- [🌐 EduTech & Learning](#-edutech--learning)
+- [🌐 Crypto & Web3](#-crypto--web3)
+- [🌐 Real Estate & Construction](#-real-estate--construction)
+- [🌐 HR & Recruiting](#-hr--recruiting)
+- [🌐 AI Agent Orchestration](#-ai-agent-orchestration)
+- [🌐 Robotics & IoT](#-robotics--iot)
+- [🌐 Supply Chain & Logistics](#-supply-chain--logistics)
+- [🌐 Customer Support AI](#-customer-support-ai)
+- [🌐 Game Development & NPCs](#-game-development--npcs)
+- [🌐 No-Code Automations](#-no-code-automations)
+- [🌐 Personal Assistants](#-personal-assistants)
+- [🌐 Data Engineering AI](#-data-engineering-ai)
+- [🌐 Cybersecurity & DefSec](#-cybersecurity--defsec)
+- [🌐 Video Production AI](#-video-production-ai)
+- [🌐 Music & Audio Synthesis](#-music--audio-synthesis)
+- [🌐 AgriTech & Farming](#-agritech--farming)
+- [🌐 Language Translation](#-language-translation)
+- [🌐 Academic Research & ArXiv](#-academic-research--arxiv)
+- [🌐 Astrophysics AI](#-astrophysics-ai)
+- [🌐 Climate Tech & ESG](#-climate-tech--esg)
+- [🌐 Fitness & Nutrition](#-fitness--nutrition)
+- [🌐 Psychology & Therapy](#-psychology--therapy)
+- [🌐 Event Management](#-event-management)
+- [🌐 Non-Profit & ONG AI](#-non-profit--ong-ai)
+- [🌐 Politics & OSINT](#-politics--osint)
+- [🌐 Fashion & Design](#-fashion--design)
+- [🌐 Interior Architecture](#-interior-architecture)
+- [🌐 Salesforce & CRM](#-salesforce--crm)
+- [🌐 Quantitative Trading](#-quantitative-trading)
+</details>
+
+---
+
+
+## 🌟 Featured Agents of the Week
+*Curated, production-grade agents built by the community.*
+
+| Agent | Domain | Highlights |
+|-------|--------|------------|
+| 💰 **[Cyber Oracle FX](agents/cyber-oracle-fx/)** | FinTech | TensorFlow models for predictive alt-data stock analysis. |
+| 🛡️ **[Vanguard Guardian](agents/vanguard-guardian/)** | InfoSec | CrewAI agents simulating automated red-team penetration tests. |
+| 🧠 **[Mental Health Bot](agents/mental-health-bot/)** | Wellness | Emotionally-intelligent CBT companion tuned on specialized datasets. |
+
+---
+
+
 ## 🤖 The Massive Agent Directory
 
 | # | Agent | Description | Tech Stack | Author |
