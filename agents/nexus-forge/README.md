@@ -1,0 +1,1 @@
+# Nexus Forge\n\n> Smart Strategy for EduTech\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

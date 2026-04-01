@@ -1,0 +1,1 @@
+# Swift Sync Med\n\n> Scalable Analytics for Healthcare\n\n**Tech Stack:** FastAPI, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

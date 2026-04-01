@@ -1,0 +1,1 @@
+# Omni Weaver Med\n\n> Automated Synthesis for Healthcare\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

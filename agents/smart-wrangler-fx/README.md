@@ -1,0 +1,1 @@
+# Smart Wrangler FX\n\n> Dynamic Processing for Finance\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Auto Flow\n\n> Smart Workflows for HR\n\n**Tech Stack:** CrewAI, Claude 3\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

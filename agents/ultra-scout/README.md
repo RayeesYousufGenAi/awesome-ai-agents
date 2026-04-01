@@ -1,0 +1,1 @@
+# Ultra Scout\n\n> Smart Data for EduTech\n\n**Tech Stack:** Next.js, Vercel AI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

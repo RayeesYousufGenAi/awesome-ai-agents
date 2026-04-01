@@ -1,0 +1,1 @@
+# Omni Hub\n\n> Smart Synthesis for LegalTech\n\n**Tech Stack:** FastAPI, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

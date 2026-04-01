@@ -1,0 +1,1 @@
+# Swift Node\n\n> Scalable Analytics for Content Creation\n\n**Tech Stack:** FastAPI, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

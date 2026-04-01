@@ -1,0 +1,1 @@
+# Pro Copilot\n\n> AI-Driven Management for LegalTech\n\n**Tech Stack:** Next.js, Vercel AI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

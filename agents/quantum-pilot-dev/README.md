@@ -1,0 +1,1 @@
+# Quantum Pilot Dev\n\n> Adaptive Optimization for DevSecOps\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

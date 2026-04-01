@@ -1,0 +1,1 @@
+# Pro Copilot Dev\n\n> Intelligent Synthesis for DevSecOps\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

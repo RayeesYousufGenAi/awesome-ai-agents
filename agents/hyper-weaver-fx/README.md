@@ -1,0 +1,1 @@
+# Hyper Weaver FX\n\n> Dynamic Data for Finance\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

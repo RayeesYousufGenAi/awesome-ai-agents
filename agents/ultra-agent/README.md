@@ -1,0 +1,1 @@
+# Ultra Agent\n\n> Predictive Insights for LegalTech\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

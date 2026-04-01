@@ -1,0 +1,1 @@
+# Auto Sync\n\n> Predictive Analytics for LegalTech\n\n**Tech Stack:** FastAPI, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

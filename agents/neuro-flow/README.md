@@ -1,0 +1,1 @@
+# Neuro Flow\n\n> Adaptive Synthesis for Real Estate\n\n**Tech Stack:** LangChain, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

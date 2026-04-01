@@ -1,0 +1,1 @@
+# Omni Sync\n\n> Real-Time Insights for Crypto\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

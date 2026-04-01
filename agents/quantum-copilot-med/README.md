@@ -1,0 +1,1 @@
+# Quantum Copilot Med\n\n> Adaptive Insights for Healthcare\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

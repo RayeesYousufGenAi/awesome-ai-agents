@@ -1,0 +1,1 @@
+# Smart Agent\n\n> Intelligent Strategy for EduTech\n\n**Tech Stack:** CrewAI, Claude 3\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

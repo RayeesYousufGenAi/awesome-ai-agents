@@ -1,0 +1,1 @@
+# Neuro Guardian\n\n> Automated Insights for E-Commerce\n\n**Tech Stack:** TensorFlow, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

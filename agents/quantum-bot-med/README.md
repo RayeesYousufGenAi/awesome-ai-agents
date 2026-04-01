@@ -1,0 +1,1 @@
+# Quantum Bot Med\n\n> Autonomous Data for Healthcare\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

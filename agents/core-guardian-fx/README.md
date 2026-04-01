@@ -1,0 +1,1 @@
+# Core Guardian FX\n\n> Automated Operations for Finance\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

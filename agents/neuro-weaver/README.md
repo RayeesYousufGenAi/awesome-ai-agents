@@ -1,0 +1,1 @@
+# Neuro Weaver\n\n> Real-Time Analytics for HR\n\n**Tech Stack:** TensorFlow, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

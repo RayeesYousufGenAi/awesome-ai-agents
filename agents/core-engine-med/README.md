@@ -1,0 +1,1 @@
+# Core Engine Med\n\n> AI-Driven Data for Healthcare\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

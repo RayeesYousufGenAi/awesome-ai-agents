@@ -1,0 +1,1 @@
+# Vanguard Copilot FX\n\n> Dynamic Processing for Finance\n\n**Tech Stack:** CrewAI, Claude 3\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

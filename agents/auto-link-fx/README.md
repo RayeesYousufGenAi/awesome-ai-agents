@@ -1,0 +1,1 @@
+# Auto Link FX\n\n> Intelligent Synthesis for Finance\n\n**Tech Stack:** Next.js, Vercel AI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

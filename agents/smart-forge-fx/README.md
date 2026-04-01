@@ -1,0 +1,1 @@
+# Smart Forge FX\n\n> Autonomous Data for Finance\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Cyber Copilot\n\n> AI-Driven Data for Crypto\n\n**Tech Stack:** LlamaIndex, Gemini\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

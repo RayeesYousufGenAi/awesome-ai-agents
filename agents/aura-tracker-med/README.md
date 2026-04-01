@@ -1,0 +1,1 @@
+# Aura Tracker Med\n\n> Autonomous Insights for Healthcare\n\n**Tech Stack:** TensorFlow, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Core Link\n\n> Real-Time Management for Real Estate\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Vanguard Wrangler FX\n\n> Dynamic Operations for Finance\n\n**Tech Stack:** AutoGen, GPT-4o\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

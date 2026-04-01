@@ -1,0 +1,1 @@
+# Auto Agent\n\n> Autonomous Operations for HR\n\n**Tech Stack:** AutoGen, GPT-4o\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

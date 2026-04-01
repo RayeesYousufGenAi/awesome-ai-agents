@@ -1,0 +1,1 @@
+# Nexus Bot\n\n> Scalable Insights for EduTech\n\n**Tech Stack:** LlamaIndex, Gemini\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

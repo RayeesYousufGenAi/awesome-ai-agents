@@ -1,0 +1,1 @@
+# Aura Scout Dev\n\n> Scalable Insights for DevSecOps\n\n**Tech Stack:** TensorFlow, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

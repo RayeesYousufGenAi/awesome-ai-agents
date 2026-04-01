@@ -1,0 +1,1 @@
+# Auto Weaver\n\n> Smart Operations for Real Estate\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Neuro Optimizer\n\n> Automated Workflows for Crypto\n\n**Tech Stack:** LangChain, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

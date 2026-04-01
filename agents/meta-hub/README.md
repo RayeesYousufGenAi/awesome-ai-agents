@@ -1,0 +1,1 @@
+# Meta Hub\n\n> Predictive Management for Content Creation\n\n**Tech Stack:** LlamaIndex, Gemini\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

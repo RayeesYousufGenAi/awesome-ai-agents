@@ -1,0 +1,1 @@
+# Cyber Sync Med\n\n> Predictive Processing for Healthcare\n\n**Tech Stack:** LlamaIndex, Gemini\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

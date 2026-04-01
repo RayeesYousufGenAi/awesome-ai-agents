@@ -1,0 +1,1 @@
+# Aura Forge\n\n> Predictive Strategy for LegalTech\n\n**Tech Stack:** LangChain, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

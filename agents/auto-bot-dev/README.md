@@ -1,0 +1,1 @@
+# Auto Bot Dev\n\n> Adaptive Insights for DevSecOps\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Nexus Sync\n\n> Scalable Analytics for Real Estate\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

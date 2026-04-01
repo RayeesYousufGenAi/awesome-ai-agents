@@ -1,0 +1,1 @@
+# Core Engine FX\n\n> Real-Time Operations for Finance\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

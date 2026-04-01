@@ -1,0 +1,1 @@
+# Aura Link Med\n\n> Smart Optimization for Healthcare\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

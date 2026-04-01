@@ -1,0 +1,1 @@
+# Aura Analyzer\n\n> Smart Operations for HR\n\n**Tech Stack:** Python, ChromaDB\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

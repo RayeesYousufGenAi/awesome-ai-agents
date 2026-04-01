@@ -1,0 +1,1 @@
+# Meta Tracker FX\n\n> Automated Synthesis for Finance\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

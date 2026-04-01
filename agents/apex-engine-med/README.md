@@ -1,0 +1,1 @@
+# Apex Engine Med\n\n> Adaptive Data for Healthcare\n\n**Tech Stack:** FastAPI, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

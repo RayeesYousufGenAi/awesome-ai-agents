@@ -1,0 +1,1 @@
+# Hyper Oracle FX\n\n> Dynamic Optimization for Finance\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

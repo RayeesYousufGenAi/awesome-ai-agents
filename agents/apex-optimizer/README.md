@@ -1,0 +1,1 @@
+# Apex Optimizer\n\n> Autonomous Management for HR\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

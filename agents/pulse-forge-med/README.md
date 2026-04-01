@@ -1,0 +1,1 @@
+# Pulse Forge Med\n\n> Automated Workflows for Healthcare\n\n**Tech Stack:** Next.js, Vercel AI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Meta Guardian\n\n> Autonomous Management for Real Estate\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

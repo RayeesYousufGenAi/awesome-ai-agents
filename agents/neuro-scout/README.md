@@ -1,0 +1,1 @@
+# Neuro Scout\n\n> Scalable Management for Content Creation\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

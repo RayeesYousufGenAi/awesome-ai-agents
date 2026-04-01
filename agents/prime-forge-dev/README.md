@@ -1,0 +1,1 @@
+# Prime Forge Dev\n\n> Autonomous Management for DevSecOps\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

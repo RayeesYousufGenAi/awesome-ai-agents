@@ -1,0 +1,1 @@
+# Zen Pilot\n\n> Predictive Workflows for HR\n\n**Tech Stack:** TensorFlow, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

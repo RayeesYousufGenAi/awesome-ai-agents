@@ -1,0 +1,1 @@
+# Core Hub\n\n> Real-Time Strategy for E-Commerce\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

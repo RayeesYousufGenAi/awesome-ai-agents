@@ -1,0 +1,1 @@
+# Elite Optimizer\n\n> Automated Management for E-Commerce\n\n**Tech Stack:** LlamaIndex, Gemini\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Quantum Node\n\n> AI-Driven Data for Real Estate\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

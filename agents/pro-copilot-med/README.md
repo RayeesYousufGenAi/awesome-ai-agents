@@ -1,0 +1,1 @@
+# Pro Copilot Med\n\n> Adaptive Management for Healthcare\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

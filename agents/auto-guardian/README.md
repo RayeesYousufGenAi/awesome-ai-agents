@@ -1,0 +1,1 @@
+# Auto Guardian\n\n> Smart Processing for EduTech\n\n**Tech Stack:** LangChain, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Smart Analyzer\n\n> Autonomous Workflows for LegalTech\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

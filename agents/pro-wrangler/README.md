@@ -1,0 +1,1 @@
+# Pro Wrangler\n\n> Predictive Optimization for Real Estate\n\n**Tech Stack:** CrewAI, Claude 3\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Omni Optimizer\n\n> Predictive Workflows for Crypto\n\n**Tech Stack:** LangChain, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Core Agent\n\n> Smart Processing for Content Creation\n\n**Tech Stack:** Python, ChromaDB\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

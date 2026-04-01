@@ -1,0 +1,1 @@
+# Omni Pilot\n\n> Predictive Processing for Crypto\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Pulse Scout\n\n> Dynamic Management for HR\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

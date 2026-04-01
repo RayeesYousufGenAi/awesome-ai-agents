@@ -1,0 +1,1 @@
+# Neuro Oracle\n\n> Smart Strategy for LegalTech\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

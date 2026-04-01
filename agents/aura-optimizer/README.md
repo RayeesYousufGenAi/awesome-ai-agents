@@ -1,0 +1,1 @@
+# Aura Optimizer\n\n> Dynamic Operations for Crypto\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

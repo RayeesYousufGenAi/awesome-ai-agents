@@ -1,0 +1,1 @@
+# Vanguard Forge\n\n> Adaptive Management for Crypto\n\n**Tech Stack:** Node.js, Anthropic\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

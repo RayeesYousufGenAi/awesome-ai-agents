@@ -1,0 +1,1 @@
+# Prime Sync\n\n> Real-Time Optimization for LegalTech\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

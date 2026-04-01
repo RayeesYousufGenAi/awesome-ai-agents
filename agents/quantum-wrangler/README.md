@@ -1,0 +1,1 @@
+# Quantum Wrangler\n\n> Smart Management for EduTech\n\n**Tech Stack:** AutoGen, GPT-4o\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Elite Guardian\n\n> Predictive Data for LegalTech\n\n**Tech Stack:** LangChain, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

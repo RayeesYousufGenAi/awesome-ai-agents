@@ -1,0 +1,1 @@
+# Neuro Sync\n\n> Real-Time Optimization for HR\n\n**Tech Stack:** PyTorch, HuggingFace\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

@@ -1,0 +1,1 @@
+# Neuro Optimizer Med\n\n> Predictive Synthesis for Healthcare\n\n**Tech Stack:** React, Pinecone\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

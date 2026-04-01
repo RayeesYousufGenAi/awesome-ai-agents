@@ -1,0 +1,1 @@
+# Pro Tracker\n\n> Real-Time Processing for HR\n\n**Tech Stack:** FastAPI, LangChain\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n

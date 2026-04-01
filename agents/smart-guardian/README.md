@@ -1,0 +1,1 @@
+# Smart Guardian\n\n> Predictive Analytics for Real Estate\n\n**Tech Stack:** Streamlit, OpenAI\n\n*(Status: Scaffolding Complete. Core logic pending insertion.)*\n
