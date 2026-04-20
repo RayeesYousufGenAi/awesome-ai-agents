@@ -24,6 +24,7 @@ Welcome to the largest, most actively maintained directory of **working AI agent
 
 ### 🌟 Why This Hub Exists
 *   **🛠️ Working Code First**: Stop fighting broken implementations. Every agent includes a strict `requirements.txt` and a dedicated `README.md`.
+- **[OpenMagic](https://github.com/Kalmuraee/OpenMagic)** - AI-powered coding toolbar for any web app. Captures element context, previews diffs, and applies approved changes through a reverse proxy.
 *   **🧠 Architecture Patterns**: Learn real-world implementations of RAG, ReAct, Task Planning, and Multi-Agent Orchestration (CrewAI, LangChain, AutoGen).
 *   **🤝 Community Powered**: Built by developers, for developers. Submit a PR, and your name gets etched into the Hall of Fame.
 *   **⚡ Copy-Paste Deployments**: Use our *Agent Master Template* to rapidly scaffold your next big idea.
